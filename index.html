@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/> <!-- leaflet stylesheet -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> <!-- jQuery UI stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  <!-- Materialize stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <title>National Park Finder</title>
+</head>
+<body>
+
+    <!--Header Bar-->
+    <nav>
+        <div class="nav-wrapper">
+            <img src="./assets/images/npslogo.png" id='npslogo'>
+            <a href="#" class="brand-logo" id='headerText'>National Park Finder</a>
+        </div>
+    </nav>
+
+    <!-- Search Bar-->
+    <section id="search">
+        <div id="search-Bar">
+            <input id="tags" placeholder="Search by Name">
+            <button id="searchButton">Search</button>
+        </div>
+    <section>
+
+    <!-- Inset Map -->
+    <section id="mapid"></section>
+    
+    <section id="colors-legend">
+        <div class='colors' id='green'>National Park</div>
+        <div class='colors' id='violet'>National Monument</div>
+        <div class='colors' id='red'>National Historic Site</div>
+        <div class='colors' id='gold'>National Recreation Area</div>
+        <div class='colors' id='blue'>Other Designation</div>
+    </section>
+
+    <!-- Site information fields -->
+    <section id="site-info-box">
+        <!-- HTML for site information drawn here using javascript -->
+    </section>
+
+    <section id="viewedSites"> Recently Viewed Sites
+        <div id="saved-searches">
+            <!-- Insert 'recently viewed' buttons here using javascript -->
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>   <!--Import Leaflet--> 
+    <script src="https://unpkg.com/esri-leaflet@3.0.1/dist/esri-leaflet.js" integrity="sha512-JmpptMCcCg+Rd6x0Dbg6w+mmyzs1M7chHCd9W8HPovnImG2nLAQWn3yltwxXRM7WjKKFFHOAKjjF2SC4CgiFBg==" crossorigin=""></script> <!-- Import ESRI Leaflet -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  <!-- Import jQuery -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- Import jQuery UI -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>

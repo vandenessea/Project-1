@@ -1,0 +1,263 @@
+
+:root {
+  --npsBackgroundColor: #70100a;
+  --body-background: rgb(235, 235, 235);
+  --item-width: 96%;
+}
+
+
+body {
+  background-color: var(--body-background);
+}
+
+/*************/
+/* Title Bar */
+/*************/
+
+nav {
+  background-color: var(--npsBackgroundColor);
+  height: 100px;
+}
+
+#npslogo {
+  height: 85px;
+  margin: 5px;
+}
+
+#headerText {
+  line-height: 100px;
+}
+
+/***************************/
+/* Autocomplete Search Box */
+/***************************/
+
+#search {
+  width: var(--item-width);
+  margin: 0 auto;
+}
+
+#search-Bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 10px 0 10px 0;
+}
+
+#tags {
+  width: 600px;
+  height: 40px;
+  font-size: 20px;
+  color: var(--npsBackgroundColor);
+}
+
+#searchButton {
+  height: 45px;
+  width: 90px;
+  font-size: 20px;
+  background-color: var(--npsBackgroundColor);
+  border-radius: 5px;
+  color: white;
+}
+
+#searchButton:hover {
+  opacity: .8
+}
+
+::placeholder {
+  color: var(--npsBackgroundColor);
+}
+
+.ui-menu-item-wrapper {
+  z-index: 500;   /* z-index keeps dropdown items on top of map */
+  font-size: 20px;
+}  
+
+
+
+/*************/
+/* Inset Map */
+/*************/
+
+/* Sets Height of MapID */ 
+#mapid { 
+  height: 700px;
+  z-index: 1;  /* z-index keeps map underneath of dropdown items */
+  margin: 0 auto;    /* centered horizontally */
+  width: var(--item-width);
+  border-radius: 5px;
+}
+
+/* styles marker popup boxes */
+#popup {
+  font-size: 30px;
+}
+
+.popup-button {
+  font-size: 25px;
+}
+
+/* Styles for color bars legend below map */
+#colors-legend {
+  display: flex;
+  flex-direction: column;
+  width: var(--item-width);
+  line-height: 50px;
+  text-align: center;
+  align-items: center;
+  font-size: 22.5px;
+  margin: 0 auto;
+}
+
+/* styles for individual colors in color bar */
+.colors {
+  width: var(--item-width);
+  border-radius: 5px;
+}
+#green {background-color: #2AAD27}
+#violet {background-color: #9C2BCB}
+#red {background-color: #CB2B3E}
+#gold {background-color: #FFD326}
+#blue {background-color: #2A81CB}
+      
+
+/*********************/
+/* Park Info Section */
+/*********************/
+
+#site-info {
+  width: var(--item-width);
+  border: 5px solid var(--npsBackgroundColor);
+  margin: 10px auto 10px auto;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 20px;
+  padding: 2px;
+  color: var(--npsBackgroundColor);
+  font-weight: bold;
+}
+
+.info-item {
+  color: black;
+}
+
+#park-img {
+  text-align: center;
+}
+
+#img-link {
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+/***************************/
+/* Previously Viewed Sites */
+/***************************/
+
+#viewedSites {
+  width: var(--item-width);
+  border: 5px solid var(--npsBackgroundColor);
+  margin: 10px auto 10px auto;
+  font-size: 20px;
+  color: var(--npsBackgroundColor);
+  font-weight: bold;
+  text-align: center;
+}
+
+#saved-searches {
+  margin-bottom: 10px;
+}
+
+.saved-search-button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--npsBackgroundColor);
+  color: white;
+}
+
+.saved-search-button:hover {
+  opacity: .6;
+}
+
+/*****************/
+/* Media Queries */
+/*****************/
+
+@media screen and (max-width: 2000px) {
+  #colors-legend {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  #colors-legend {font-size: 20px}
+}
+
+@media screen and (max-width: 1220px) {
+  #colors-legend {font-size: 17.5px}
+  #tags {width: 500px}
+}
+
+@media screen and (max-width: 1110px) {
+  #colors-legend {font-size: 15px}
+}
+
+@media screen and (max-width: 970px) {
+  #colors-legend {font-size: 12.5px}
+}
+
+@media screen and (max-width: 835px) {
+  #colors-legend {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    align-items: center;
+    font-size: 22.5px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #headerText {font-size: 20px;}
+  #tags {
+    width: 350px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #tags {width: 275px}
+  p {font-size: 15px;}
+  #viewedSites {font-size: 15px;}
+  #tags {
+    width: 300px;
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #img-link {
+    height: 300px;
+    width: 300px;
+  }
+  #tags {
+    width: 225px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #headerText {font-size: 17.5px}
+  #img-link {
+    height: 250px;
+    width: 250px;
+  }
+}
